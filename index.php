@@ -10,12 +10,12 @@
 </head>
 <body>
 <?php
-    require_once "connect.php"; //imports my connect to database file
-    $sql = "SELECT * FROM products"; //command for selceting my table in my database
-    $result = mysqli_query($connect, $sql); //combo of connect and select commands
+    require_once "connect.php"; 
+    $sql = "SELECT * FROM products"; 
+    $result = mysqli_query($connect, $sql); 
     $layout = "";
-    if(mysqli_num_rows($result) > 0){ //checks for data
-        while($row = mysqli_fetch_assoc($result)){ //if there is data
+    if(mysqli_num_rows($result) > 0){ 
+        while($row = mysqli_fetch_assoc($result)){ 
             $layout .= "
             <tr>
                 <th scope='col'>{$row["ISBN"]}</th>
